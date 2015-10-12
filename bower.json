@@ -1,0 +1,30 @@
+{
+  "name": "youtubeSearch",
+  "version": "1.0.0",
+  "authors": [
+    "AhmadZuhdi <rccheattest2@gmail.com>"
+  ],
+  "description": "youtube search wrapper",
+  "main": "index.js",
+  "moduleType": [
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "youtube",
+    "search"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bluebird": "~2.10.2",
+    "es6-shim": "~0.33.6",
+    "fetch": "~0.10.0"
+  }
+}

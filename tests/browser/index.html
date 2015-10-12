@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script src="./../../bower_components/es6-shim/es6-shim.min.js"></script>
+        <script src="./../../bower_components/fetch/fetch.js"></script>
+        <script src="./../../bower_components/bluebird/js/browser/bluebird.min.js"></script>
+        <script src="./../../lib/youtubeSearch.js"></script>
+    </head>
+    <body>
+      <script>
+        var ys = new youtubeSearch({
+          apiKey : 'AIzaSyD5qpDci8g2fFAlDpNbG_6ydQHn-vw4zIo'
+        })
+
+        ys.search('dota 2', {
+          part: 'snippet',
+          safeSearch: 'strict',
+          videoEmbeddable: true,
+          maxResults: 10,
+          type: 'video',
+        }).then(function(result){
+           console.log(result.getData())
+           result.nextPage()
+            .then(function(nextRes){
+              console.log(nextRes.getData());
+              return nextRes.prevPage()
+            })
+            .then(function(nextRes){
+              console.log(nextRes.getData());
+            })
+        })
+      </script>
+    </body>
+</html>

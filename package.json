@@ -1,0 +1,24 @@
+{
+  "name": "youtubeSearch",
+  "version": "1.0.0",
+  "description": "youtube search wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "node ./tests/node",
+    "build": "babel src --out-dir lib",
+    "build-watch": "babel src --out-dir lib --watch",
+    "build-maps": "babel src --source-maps --out-dir lib",
+    "build-maps-watch": "babel src --source-maps --out-dir lib --watch"
+  },
+  "keywords": [
+    "youtube",
+    "search"
+  ],
+  "author": "Ahmad Zuhdi <ahmad.zuhdi.y@gmail.com> (github.com/ahmadzuhdi)",
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.10.2",
+    "es6-shim": "^0.33.6",
+    "node-fetch": "^1.3.3"
+  }
+}
